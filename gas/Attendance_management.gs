@@ -2,9 +2,9 @@
 //スタンドアロンスクリプト
 
 //各種フォルダのIDを定義
-const adminFolder = DriveApp.getFolderById('1la8sjOdJavXKfKkzhXqKTaTqe7ex_vQE');
-const timeSheetFolder = DriveApp.getFolderById('13Q84U-DWAUZ-BqWwoXle1Z0bsAqky65t');
-const pdfFolder = DriveApp.getFolderById('17WlOL3siWoPkwLDA-X0jt_XnTtX5xxNr');
+const adminFolder = DriveApp.getFolderById('フォルダIDを設定');
+const timeSheetFolder = DriveApp.getFolderById('フォルダIDを設定');
+const pdfFolder = DriveApp.getFolderById('フォルダIDを設定');
 
 function main() {
   //管理者用シートを作成
@@ -102,7 +102,7 @@ function makeEmployeeFiles(){
     const empId = empData[i][0];
     const empName = empData[i][1];
     const newFileName = "勤務表_" + yyyymm + "_" + empName;
-    const templateFolder = DriveApp.getFolderById('1qH9XxcPJ2Uk5WrkstTWozYXo7zVWJ3JT');
+    const templateFolder = DriveApp.getFolderById('フォルダのIDを設定');
     const newFileId = templateFolder.getFilesByName("勤務表_ひな型").next().makeCopy(newFileName, timeSheetFolder).getId();
     const newFile = SpreadsheetApp.openById(newFileId).getActiveSheet();
     newFile.getRange("A1").setValue(year);
@@ -121,7 +121,7 @@ function makeEmployeeFiles(){
 }
 
 function movePastFiles(){
-  const oldFolder = DriveApp.getFolderById('1aukkbf3mSXeOELUtV0W_SIz8Y7-IDeth');
+  const oldFolder = DriveApp.getFolderById('フォルダのIDを設定');
 
   //oldフォルダ内に今月の年月でフォルダ生成
   const yyyymmFolder = oldFolder.createFolder(dayjs.dayjs().format("YYYYMM"));
