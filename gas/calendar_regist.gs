@@ -53,7 +53,7 @@ function calenderAdd() {
     }
 
     //Googleカレンダーを呼び出す（引数には自身のID（Googleメールアドレス）を設定）
-    let calender = CalendarApp.getCalendarById("oxbs2005@gmail.com"); 
+    let calender = CalendarApp.getCalendarById("Googleメールアドレスを設定"); 
 
     //カレンダーにイベント登録
     calender.createEvent( 
