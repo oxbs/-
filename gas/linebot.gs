@@ -2,7 +2,7 @@
 //コンテナバインドスクリプト（スプレッドシートと連携）
 
 // LINE Developerのアクセストークン
-var access_token = "WxE11DiRHD5ONOOKUe6UP3MRqkFIsQzik2sx+fu9mtiFGTWaWYqepaWFlSJ8IdEYfWiGkRTQJ+3C3uNcbpX/K2r58MJUvCTfsRudRyHlfwd2gRcbp2IMZJowONX/QWw9mFqXCkClHdcPk3dyHWjObwdB04t89/1O/w1cDnyilFU="
+var access_token = "アクセストークンのIDを設定"
 
 /**
  LINEからのPOST受け取り
@@ -236,7 +236,7 @@ function meigenDelete(del) {
  */
 function birthdayLog(inpmsg2,inpmsg3) {
 
-  var data = SpreadsheetApp.openById("1_sJUfmcBvOBmMH3MDT3VSSRfXv-1UANVLWBKXz6Sc_w").getSheetByName("誕生日");
+  var data = SpreadsheetApp.openById("スプレッドシートのIDを設定").getSheetByName("誕生日");
   var last_row = data.getLastRow();
   var birthdays = data.getRange(2, 1, last_row,2).getValues();
   // birthday2には名前が入る
@@ -491,7 +491,7 @@ function push_weather() {
 
   var postData = {
     //自分のLINEID（他の人のIDに変えれば、他の人に届く。IDをリスト化してループすれば複数人にまとめて送れる）
-    "to": "Ub34e68348214e6644a53738f6d0d1c3e",
+    "to": "LINEIDを設定",
     "messages": [
       {
         "type": "text",
@@ -517,7 +517,7 @@ function push_weather() {
 function GetEventsFunction() {
 
   //Googleカレンダーの情報取得（引数を他の人のGoogleカレンダーIDにすれば、そのカレンダー情報を取得できる）
-  const myCalendar = CalendarApp.getCalendarById("oxbs2005@gmail.com")
+  const myCalendar = CalendarApp.getCalendarById("GoogleカレンダーIDを設定")
   const today = new Date;
 
   //今日の予定を取得
@@ -568,7 +568,7 @@ function push_schedule() {
 
   var postData = {
     //自分のLINEID（他の人のIDに変えれば、他の人に届く。IDをリスト化してループすれば複数人にまとめて送れる）
-    "to": "Ub34e68348214e6644a53738f6d0d1c3e",
+    "to": "LINEIDを設定",
     "messages": [
       {
         "type": "text",
