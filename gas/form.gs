@@ -16,7 +16,7 @@ function createForm() {
 
 //シート情報取得
 function fetchSheet(sheet_name) {
-  spreadsheet = SpreadsheetApp.openById('1CbY18DhLDNLyDU13Ro5jVUeTITIOkhSqyE3-ZSV8y1A');
+  spreadsheet = SpreadsheetApp.openById('スプレッドシートのIDを設定');
   sheet = spreadsheet.getSheetByName(sheet_name);
   return sheet;
 }
@@ -148,7 +148,7 @@ function postMail(name,email,level) {
 
 //メール返信の本文をドキュメントファイルから取得
 function readBody() {
-  doc_url = 'https://docs.google.com/document/d/1MjhSqxTgs8AUj1BM6EQD9Q_6keeu_8q145qYG8pf_ic/edit';
+  doc_url = 'ドキュメントファイルのURLを設定';
   doc = DocumentApp.openByUrl(doc_url);
   return doc.getBody().getText();
 }
